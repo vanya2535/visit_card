@@ -1,0 +1,417 @@
+/*common properties*/
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 1em;
+}
+
+a {
+   text-decoration: none;
+   color: #828282;
+   &:hover {
+      color: #070707
+   }
+}
+
+html {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+*, *::after, *::before {
+   -webkit-box-sizing: inherit;
+   box-sizing: inherit;
+}
+
+
+
+/*header properties*/
+.header .container {
+   display: flex;
+   justify-content: space-between;
+   @media (min-width: 1025px) {
+      flex-direction: column-reverse;
+      margin: 32px 52px;
+   }
+}
+
+.header .container .menu {
+   display: none;
+   position: fixed;
+   z-index: 2;
+   background-color: #FFF;
+   width: 100%;
+   height: 100%;
+   font-weight: 700;
+   font-size: 23px;
+   &__section {
+      margin: 66px 26px;
+      @media (min-width: 1025px) {
+         margin: 0;
+         padding: 0;
+      }
+   }
+   @media (min-width: 480px) {
+      font-size: 27px;
+   }
+   @media (min-width: 600px) {
+      font-size: 33px;
+   }
+   @media (min-width: 1025px) {
+      display: flex;
+      z-index: auto;
+      position: relative;
+      font-size: 23px;
+      justify-content: space-between;
+      height: 31px;
+      padding-bottom: 62px;
+      margin: 32px 26px;
+      border-bottom: 1px solid #828282;
+      width: calc(100vw - 156px);
+   }
+}
+
+.header .container .lang-menu {
+   display: flex;
+   position: absolute;
+   right: 27px;
+   bottom: 57px;
+   transform: rotate(90deg);
+   .selected {
+      color: #070707;
+   }
+   @media (min-width: 1025px) {
+      display: none;
+   }
+}
+
+.header .container .menu-btn {
+   width: 33px;
+   height: 20px;
+   background-color: #FFF;
+   position: absolute;
+   z-index: 3;
+   top: 68px;
+   right: 30px;
+   border: none;
+   &::after {
+      content: "";
+      width: 33px;
+      height: 4px;
+      background-color: #000;
+      box-shadow: 0 8px 0 0 #000, 0 16px 0 0 #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+   }
+   @media (min-width: 480px) {
+      width: 43px;
+      height: 30px;
+      &::after {
+         width: 43px;
+         height: 5px;
+         box-shadow: 0 10px 0 0 #000, 0 20px 0 0 #000;
+      }
+   }
+   @media (min-width: 600px) {
+      width: 53px;
+      height: 40px;
+      &::after {
+         width: 53px;
+         height: 7px;
+         box-shadow: 0 14px 0 0 #000, 0 28px 0 0 #000;
+      }
+   }
+   @media (min-width: 1025px) {
+      display: none;
+   }
+}
+
+.header .container .header__inner {
+   margin: 65px 26px;
+   .title {
+      height: 106px;
+      &__text {
+         font-size: 33px;
+         @media (min-width: 480px) {
+            font-size: 35px;
+         }
+         @media (min-width: 600px) {
+            font-size: 39px;
+         }
+      }
+   }
+   .description {
+      height: 44.06px;
+      &__text {
+         font-size: 14px;
+         @media (min-width: 480px) {
+            font-size: 15px;
+         }
+         @media (min-width: 600px) {
+            font-size: 19px;
+         }
+      }
+   }
+   .lang-menu {
+      display: none;
+      @media (min-width: 1025px) {
+         display: flex;
+         position: inherit;
+         transform: rotate(-90deg);
+         font-size: 22px;
+         font-weight: 900;
+         .selected {
+            color: #070707;
+         }
+      }
+   }
+   @media (min-width: 1025px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0;
+   }
+}
+
+/*me properties*/
+.main .container .me {
+   position: relative;
+   overflow: hidden;
+   height: 478px;
+   margin: 36.94px 26px;
+   &__photo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      height: 478px;
+      object-fit: cover;
+      @media (min-width: 1025px) {
+      all: initial;
+      height: auto;
+      width: calc(100vw - 156px);
+      }
+   }
+   @media (min-width: 1025px) {
+      all: initial;
+      height: auto;
+      width: calc(100vw - 156px);
+      margin: 36.94px 78px;
+   }
+}
+
+/*container common properties*/
+.main .container, .footer .container {
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+
+/*about me properties*/
+.main .container .about {
+   margin-top: 83px;
+   padding-bottom: 76px;
+   padding: 81px 26px;
+   background-color: #F6F6F6;
+   .title__text {
+      font-size: 31px;
+      @media (min-width: 480px) {
+         font-size: 35px;
+      }
+      @media (min-width: 600px) {
+         font-size: 39px;
+      }
+   }
+   .main .section {
+      padding-top: 29.94px;
+      &__text {
+         font-size: 15px;
+         @media (min-width: 480px) {
+            font-size: 19px;
+         }
+         @media (min-width: 600px) {
+            font-size: 23px;
+         }
+      }
+   }
+}
+
+
+/*skills properties*/
+.main .container .skills {
+   margin-top: 83px;
+   padding-bottom: 76px;
+   padding: 81px 26px;
+   .title__text {
+      font-size: 31px;
+      @media (min-width: 480px) {
+         font-size: 35px;
+      }
+      @media (min-width: 600px) {
+         font-size: 39px;
+      }
+   }
+   .main .description {
+      padding-top: 29.94px;
+      &__text {
+         font-size: 15px;
+         @media (min-width: 480px) {
+            font-size: 19px;
+         }
+         @media (min-width: 600px) {
+            font-size: 23px;
+         }
+      }
+   }
+   .main .images {
+      display: flex;
+      flex-direction: column;
+      margin-top: 70px;
+      @media (min-width: 1025px) {
+         flex-direction: initial;
+         flex-wrap: wrap;
+         justify-content: space-around;
+      }
+   }
+   .main .images .section {
+      padding-bottom: 81px;
+      &__image {
+         height: 200px;
+         @media (min-width: 480px) {
+            height: 275px;
+         }
+         @media (min-width: 600px) {
+            height: 350px;
+         }
+      }
+      &__description {
+         margin-top: 24px;
+         font-size: 14px;
+         @media (min-width: 480px) {
+            font-size: 15px;
+         }
+         @media (min-width: 600px) {
+            font-size: 19px;
+         }
+      }
+   }
+}
+
+/*portfolio properties*/
+.main .container .portfolio {
+   margin-top: 18px;
+   padding: 81px 26px;
+   background-color: #F6F6F6;
+   .title__text {
+      font-size: 31px;
+      margin-bottom: 29px;
+      @media (min-width: 480px) {
+         font-size: 35px;
+      }
+      @media (min-width: 600px) {
+         font-size: 39px;
+      }
+   }
+   .main .section {
+      padding-bottom: 15px;
+      font-size: 15px;
+      @media (min-width: 480px) {
+         font-size: 19px;
+      }
+      @media (min-width: 600px) {
+         font-size: 23px;
+      }
+   }
+}
+
+/*contacts properties*/
+.footer .container .contacts {
+   margin-top: 68px;
+   padding: 81px auto;
+   .title__text {
+      font-size: 31px;
+      margin-bottom: 29px;
+      @media (min-width: 480px) {
+         font-size: 35px;
+      }
+      @media (min-width: 600px) {
+         font-size: 39px;
+      }
+   }
+   .description {
+      font-size: 15px;
+      margin-bottom: 15px;
+      @media (min-width: 480px) {
+         font-size: 19px;
+      }
+      @media (min-width: 600px) {
+         font-size: 23px;
+      }
+   }
+   .send-message {
+      .btn-text {
+         font-size: 15px;
+         color: #FFF;
+         @media (min-width: 480px) {
+            font-size: 19px;
+         }
+         @media (min-width: 600px) {
+            font-size: 23px;
+         }
+      }
+      &__btn {
+         height: 42px;
+         width: 316px;
+         background-color: #000;
+         border-radius: 50px;
+         border: none;
+         @media (min-width: 480px) {
+            height: 52px;
+            width: 400px;
+         }
+         @media (min-width: 600px) {
+            height: 65px;
+            width: 500px;
+         }
+      }
+   }
+   .link-section {
+      display: flex;
+      justify-content: space-between;
+      margin: 48px auto;
+      margin-bottom: 48px;
+      width: 315px;
+      height: 41px;
+      @media (min-width: 480px) {
+         width: 400px;
+         height: 51px;
+      }
+      @media (min-width: 600px) {
+         width:500px;
+         height: 64px;
+      }
+      &__image {
+         height: 40px;
+         @media (min-width: 480px) {
+            height: 50px;
+         }
+         @media (min-width: 600px) {
+            height: 64px;
+         }
+      }
+   }
+   .link-description {
+      padding-bottom: 48px;
+      color: #828282;
+      font-size: 15px;
+      @media (min-width: 480px) {
+         font-size: 19px;
+      }
+      @media (min-width: 600px) {
+         font-size: 23px;
+      }
+   }
+}
