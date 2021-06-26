@@ -9,7 +9,6 @@ laptop_media.addListener(media_query);
 
 function media_query() {
     if (!laptop_media.matches) {
-        console.log('mobile');
         btn.addEventListener('click', menu_toggle);
         for (section of menu_sections) {
             section.addEventListener('click', menu_toggle);
@@ -17,7 +16,6 @@ function media_query() {
         menu.style.display = 'none';
     }
     else {
-        console.log('laptop');
         btn.removeEventListener('click', menu_toggle);
         for (section of menu_sections) {
             section.removeEventListener('click', menu_toggle);
